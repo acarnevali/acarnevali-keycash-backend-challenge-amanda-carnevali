@@ -19,9 +19,9 @@ Create a `.env` file using the following values:
 - DATABASE_STRING: `mongodb+srv://admin:admin1234@buildings.r3qog.mongodb.net/test`
 
 Start the API
-bash
+```bash
 npm start
-
+```
 
 ## 📔 Documentation
 
