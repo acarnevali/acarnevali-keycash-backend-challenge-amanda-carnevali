@@ -2,8 +2,9 @@
   "name": "keycash-backend-challenge-amanda-carnevali",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,8 +12,8 @@
     "url": "git+https://github.com/acarnevali/keycash-backend-challenge-amanda-carnevali.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Amanda Carnevali",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/acarnevali/keycash-backend-challenge-amanda-carnevali/issues"
   },
