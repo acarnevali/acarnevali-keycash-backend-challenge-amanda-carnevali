@@ -1,0 +1,108 @@
+swagger: "2.0"
+info:
+  description: "API REST desenvolvida para o teste de backend na Keycash"
+  version: "1.0.0"
+  title: "Teste BackEnd Keycash"
+  
+host: "localhost:3000"
+basePath: "/"
+
+tags: 
+- name: "Buildings"
+  description: "CRUD de imóveis"
+  
+paths:
+  /buildings:
+    get:
+      tags: 
+        - "Buildings"
+      summary: "Busca todos os imóveis"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: "Lista de imóveis"
+  /buildings/:id:
+    get:
+      tags: 
+        - "Buildings"
+      summary: "Busca imóvel por ID"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: "Imóvel"
+  /buildings/new:
+    post:
+      tags: 
+        - "Buildings"
+      summary: "Adiciona um novo imóvel"
+      parameters:
+        - in: body
+          name: building
+          description: Payload com as informaçoes do imóvel.
+          schema:
+            $ref: '#/definitions/PostBuilding'
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+  /buildings/edit/:id:
+    put:
+      tags: 
+        - "Buildings"
+      summary: "Atualiza um imóvel já existente"
+      parameters:
+        - in: body
+          name: building
+          description: Payload com as informaçoes do imóvel.
+          schema:
+            $ref: '#/definitions/PutBuilding'
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+  /buildings/delete/:id:
+    delete:
+      tags: 
+        - "Buildings"
+      summary: "Deleta um imóvel existente"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          
+          
+definitions:
+  PostBuilding:
+    type: object
+    required:
+      - street
+      - addressNumber
+      - district
+      - city
+      - zipCode
+    properties:
+      street:
+        type: string
+      addressNumber:
+        type: number
+      district:
+        type: string
+      city:
+        type: string
+      zipCode:
+        type: string
+  PutBuilding:
+    type: object
+    required:
+      - street
+      - addressNumber
+    properties:
+      street:
+        type: string
+      addressNumber:
+        type: number
