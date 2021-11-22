@@ -1,0 +1,33 @@
+### GET
+GET http://localhost:3000/buildings
+###
+
+### POST
+POST http://localhost:3000/buildings/new
+Content-Type: application/json
+
+{
+    "street": "Rua Alemanha",
+    "addressNumber": 100,
+    "district":"Parque das Nações",
+    "city":"Santo André",
+    "zipCode":"09240170"
+}
+###
+
+### GET
+GET http://localhost:3000/buildings/619bebe9bc4968ee45d9bc81
+###
+
+### DELETE
+DELETE http://localhost:3000/buildings/delete/619bebe9bc4968ee45d9bc81
+###
+
+### PATCH
+PATCH http://localhost:3000/buildings/edit/619bec1ebc4968ee45d9bc84
+Content-Type: application/json
+
+{
+    "addressNumber": 400
+}
+###
