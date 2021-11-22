@@ -6,8 +6,9 @@
 
 Clone this repo and install all dependencies.
 
-bash
+```bash
 npm install
+```
 
 
 ## 📌 Usage
